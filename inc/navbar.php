@@ -5,7 +5,7 @@ include 'functions.php';
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="<?php echo $url_standard ?>/index.php" style="
+        <a class="navbar-brand" href="<?php echo $url_standard ?>/landing.php" style="
     flex: 1;
 ">Super</a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">

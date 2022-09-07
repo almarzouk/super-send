@@ -84,12 +84,13 @@ else {
 							echo "</div>";
 						} else {
 							move_uploaded_file($_FILES['upload']['tmp_name'], $chemin . $_FILES['upload']['name']);
+							echo "<div class='alert alert-success text-center' role='alert'>";
 							echo "Votre fichier a été téléchargé avec succès";
+							echo "</div>";
 							$file_dirname = $chemin . $_FILES['upload']['name'];
 						}
 					} else {
 						echo "<div class='alert alert-success text-center' role='alert'>";
-
 						echo "Erreur, Il y a eu un problème de téléchargement de votre fichier, veuillez réessayer.";
 						echo "</div>";
 					}

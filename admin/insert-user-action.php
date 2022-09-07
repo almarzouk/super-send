@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include '../inc/header.php';
 include('../inc/connection.php');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $nom = $_POST['nom'];

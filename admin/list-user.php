@@ -28,7 +28,6 @@ else {
 
         <div class="container min-vh-100">
             <div class="container mt-5">
-                <?= "<h3>Module d'administration</h3>" ?>
                 <?= "<h4>Supprimer un utilisateur</h4>" ?>
                 <table class="table table-dark table-striped">
                     <th>Nom</th>

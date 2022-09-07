@@ -15,17 +15,12 @@ else {
 		include '../inc/connection.php';
 		include '../inc/header.php';
 		include '../inc/navbar.php';
-
-
-		echo "<h3>Module d'administration</h3>";
-
-
 		//je rajoute une condition
 		// si je suis admin, je vois le contenu destiné à l'admin
 
 ?>
 
-		<div class="container ">
+		<div class="container min-vh-100">
 			<form action="insert-objet-action.php" method="post" enctype="multipart/form-data" class="mb-5 w-50 p-5 m-auto">
 				<h4>Ajouter un objet</h4>
 				<div class="mb-3  d-flex flex-column w-50">

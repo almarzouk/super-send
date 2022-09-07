@@ -40,7 +40,7 @@ if (!isset($_POST['mail']) && !isset($_POST['pwd'])) {
 
 <div class="container text-center">
     <h3 class="text-center m-5">
-        Welcome to super E-commerce, votre site de location de materiel photo, vidéo, et accessoires.
+        Welcome to super Website, votre site de location de materiel photo, vidéo, et accessoires.
     </h3>
     <!-- Carusel start -->
     <div class="container mt-5">

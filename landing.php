@@ -327,7 +327,7 @@ else {
 				$pluriel = "";
 			}
 			echo "<li class = 'mb-3'>" . "<span class='badge rounded-pill text-bg-warning'>"  . $requete_count_emprunts_clos[0][0] . "</span> " . " emprunt$pluriel clos (en historique) </li>";
-			echo "<li><a class='btn btn-danger'  href='emprunts.php'>Annuler un emprunt</a></li>";
+			echo "<li><a class='btn btn-danger'  href='emprunts.php?option_page=1'>Annuler un emprunt</a></li>";
 			echo '</ul>';
 			echo '</div>';
 			echo '</div>';
