@@ -34,7 +34,9 @@ session_start();
 
         if($statement->execute()) 
         {
-        echo "Suppression de la fiche objet $id effectuée dans la base de données!";
+            echo "<div class='alert alert-success text-center' role='alert'>";
+            echo "Suppression de la fiche objet $id effectuée dans la base de données!";
+			echo "</div>";
         header('Refresh: 3; ../landing.php');
         }
         
@@ -43,4 +45,3 @@ session_start();
         }//Fermeture session admin  
 
 	}//Fermeture session 		
-?>

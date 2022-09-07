@@ -16,13 +16,19 @@ else {
 		include '../inc/header.php';
 		include '../inc/navbar.php';
 
+
+		echo "<h3>Module d'administration</h3>";
+
+
+		//je rajoute une condition
+		// si je suis admin, je vois le contenu destiné à l'admin
+
 ?>
 
-		<div class="container min-vh-100">
-			<form action="insert-objet-action.php" method="post" class="mb-5 w-50 p-5 m-auto">
-				<?= "<h3>Module d'administration</h3>"; ?>
+		<div class="container ">
+			<form action="insert-objet-action.php" method="post" enctype="multipart/form-data" class="mb-5 w-50 p-5 m-auto">
 				<h4>Ajouter un objet</h4>
-				<div class="mb-3">
+				<div class="mb-3  d-flex flex-column w-50">
 					<label for="exampleInputEmail1" class="form-label">Choisissez une catégorie :</label><br />
 
 					<?php
@@ -38,11 +44,15 @@ else {
 
 						// pas réussi avec des select dynamiques propres, je passe sur des liens dynamiques
 						if (isset($_GET['cat']) && ($_GET['cat']) == $id_category) {
-							$style = "class='badge text-bg-success text-decoration-none fs-6 me-3'";
+							$style = "class='badge text-bg-success text-decoration-none fs-6 me-3' style='
+							min-width: 150px;
+						'";
 						} else {
-							$style = "class='badge text-bg-dark text-decoration-none fs-6 me-3'";
+							$style = "class='badge text-bg-dark text-decoration-none fs-6 me-3' style='
+							min-width: 150px;
+						'";
 						}
-						echo "<a $style href='insert-objet?cat=$id_category'>$nom_category</a>";
+						echo "<a $style href='insert-objet?cat=$id_category'>$nom_category</a> &nbsp; &nbsp; &nbsp;     ";
 					}
 					?>
 
@@ -85,11 +95,11 @@ else {
 					</div>
 					<div class="mb-3">
 						<label for="exampleInputEmail1" class="form-label">photo</label>
-						<input name="photo" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+						<input name="upload" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 					</div>
 
 					<div class="mb-3">
-						<label>Quantité entrée en stock </label>&nbsp;
+						<label>Quantité entrée en stock </label>
 						<input name="quantite" type="texte">
 					</div>
 				<?php } // isset get cat

@@ -35,7 +35,9 @@ session_start();
 
         if($statement->execute()) 
             {
+                echo "<div class='alert alert-success text-center' role='alert'>";
                 echo "Suppression de la fiche utilisateur $id correctement effectuée dans la base de données!";
+                echo "</div>";
                 header("Refresh: 3; $url_standard/admin/list-user.php");
             }
         
@@ -46,4 +48,3 @@ session_start();
 	     }//Fermeture session admin  
 
 	}//Fermeture session
-?>

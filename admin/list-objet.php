@@ -21,7 +21,7 @@ else {
 		// si je suis admin, je vois le contenu destiné à l'admin
 
 		//Requete pour tester la connexion
-		$query = $pdo->query("SELECT * FROM `objets`");
+		$query = $pdo->query("SELECT * FROM `objets` ORDER BY id_objet ASC");
 		$resultat = $query->fetchAll();
 ?>
 

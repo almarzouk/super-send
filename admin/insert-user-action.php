@@ -1,5 +1,5 @@
 <?php
-session_start ();
+session_start();
 
 include('../inc/connection.php');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -21,14 +21,13 @@ $req->bindValue(':type', $type, PDO::PARAM_STR);
 $req->bindValue(':pass', $pass, PDO::PARAM_STR);
 
 if ($req->execute()) {
-    echo ("les données ont bien été enregistrées dans la base de données!");
-	
-	if (isset ($_SESSION['nom_user']))
-	{
+	echo "<div class='alert alert-success text-center' role='alert'>";
+	echo ("les données ont bien été enregistrées dans la base de données!");
+	echo "</div>";
+
+	if (isset($_SESSION['nom_user'])) {
 		header('Refresh: 3; ../landing.php');
-	}
-    else
-	{
+	} else {
 		header('Refresh: 3; ../index.php');
 	}
 }
